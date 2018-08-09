@@ -9,8 +9,8 @@ Have fun listening to music!!
 
 ## Some Screenshot
 ### Playing
-![Playing UI](\img\Playing.jpg)
+![Playing UI](/img/Playing.jpg)
 ### Playlist
-![Playlist UI](\img\Playlist.jpg)
+![Playlist UI](/img/Playlist.jpg)
 ### About
-![About UI](\img\About.jpg)
+![About UI](/img/About.jpg)
