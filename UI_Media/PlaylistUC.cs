@@ -32,12 +32,13 @@ namespace UI_Media
         {
             btn_list = new List<Button>();
             delete_list = new List<Button>();
+            int height = button1.Height;
             for (int i = 0; i < playlist.Count; i++)
             {
                 Button tmp = button1.Clone();
                 tmp.FlatAppearance.BorderSize = 0;
                 tmp.Text = System.IO.Path.GetFileName(playlist[i]);
-                tmp.Location = new Point(0, 40 * i);
+                tmp.Location = new Point(0, height * i);
                 btn_list.Add(tmp);
                 btn_list[i].Visible = true;
                 this.Controls.Add(btn_list[i]);
@@ -45,7 +46,7 @@ namespace UI_Media
 
                 tmp = button2.Clone();
                 tmp.FlatAppearance.BorderSize = 0;
-                tmp.Location = new Point(601, 40 * i);
+                tmp.Location = new Point(580, height * i);
                 delete_list.Add(tmp);
                 delete_list[i].Visible = true;
                 this.Controls.Add(delete_list[i]);

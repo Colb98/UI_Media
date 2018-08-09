@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using LedControllerWS2801;
-using Un4seen;
+using Un4seen.Bass;
 
 
 namespace UI_Media
@@ -45,7 +45,9 @@ namespace UI_Media
 
             TrackBar seek = (TrackBar)playingUC2.Controls.Find("seek", true)[0];
 
-            seek.ValueChanged += Seek_ValueChanged;            
+            seek.ValueChanged += Seek_ValueChanged;
+
+            playlistUC1.AutoScroll = true;
         }
 
         private void Seek_ValueChanged(object sender, EventArgs e)
@@ -239,6 +241,8 @@ namespace UI_Media
 
         public static void Play(int index)
         {
+            if (i == index && playing)
+                return;
             i = index;
             if (i >= FilePath.Count)
                 return;

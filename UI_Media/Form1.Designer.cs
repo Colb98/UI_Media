@@ -40,8 +40,10 @@
             this.playlistUC1 = new UI_Media.PlaylistUC();
             this.aboutUC1 = new UI_Media.AboutUC();
             this.playingUC2 = new UI_Media.PlayingUC();
+            //this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -111,7 +113,7 @@
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
             this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(64, 27);
+            this.button4.Size = new System.Drawing.Size(64, 28);
             this.button4.TabIndex = 0;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
@@ -119,14 +121,14 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button5.BackColor = System.Drawing.Color.SlateBlue;
             this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSlateBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft MHei", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(513, -1);
+            this.button5.Location = new System.Drawing.Point(513, 0);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -139,6 +141,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.SlateBlue;
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.label1);
@@ -152,13 +155,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, -1);
+            this.label1.Location = new System.Drawing.Point(0, -1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Media Player";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
-            
             // 
             // playlistUC1
             // 
@@ -168,7 +170,6 @@
             this.playlistUC1.Name = "playlistUC1";
             this.playlistUC1.Size = new System.Drawing.Size(641, 260);
             this.playlistUC1.TabIndex = 3;
-            this.playlistUC1.Parent = this;
             // 
             // aboutUC1
             // 
@@ -184,7 +185,6 @@
             this.aboutUC1.Size = new System.Drawing.Size(641, 260);
             this.aboutUC1.TabIndex = 1;
             this.aboutUC1.Visible = false;
-            this.aboutUC1.Parent = this;
             // 
             // playingUC2
             // 
@@ -195,7 +195,17 @@
             this.playingUC2.Name = "playingUC2";
             this.playingUC2.Size = new System.Drawing.Size(641, 260);
             this.playingUC2.TabIndex = 4;
-            this.playingUC2.Parent = this;
+            // 
+            // pictureBox1
+            // 
+            //this.pictureBox1.BackgroundImage = global::UI_Media.Properties.Resources.mx_player_icon;
+            //this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            //this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            //this.pictureBox1.Name = "pictureBox1";
+            //this.pictureBox1.Size = new System.Drawing.Size(37, 28);
+            //this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            //this.pictureBox1.TabIndex = 2;
+            //this.pictureBox1.TabStop = false;
             // 
             // PlayMainForm
             // 
@@ -203,6 +213,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(641, 374);
+            //this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.playingUC2);
             this.Controls.Add(this.playlistUC1);
             this.Controls.Add(this.aboutUC1);
@@ -223,6 +234,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +252,7 @@
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label1;
         private PlaylistUC playlistUC1;
-        private PlayingUC playingUC2;
+        private PlayingUC playingUC2;        
     }
 }
 

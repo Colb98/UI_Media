@@ -44,7 +44,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(296, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Media Player and UI Practice v0.1";
+            this.label1.Text = "Media Player and UI Practice v1.0";
             // 
             // label2
             // 
