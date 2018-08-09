@@ -108,6 +108,12 @@
     <Compile Include="PlayingUC.Designer.cs">
       <DependentUpon>PlayingUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlaylistUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlaylistUC.Designer.cs">
+      <DependentUpon>PlaylistUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spectrum.xaml.cs" />
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PlayingUC.resx">
       <DependentUpon>PlayingUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlaylistUC.resx">
+      <DependentUpon>PlaylistUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

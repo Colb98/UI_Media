@@ -37,8 +37,9 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.playingUC1 = new UI_Media.PlayingUC();
+            this.playlistUC1 = new UI_Media.PlaylistUC();
             this.aboutUC1 = new UI_Media.AboutUC();
+            this.playingUC2 = new UI_Media.PlayingUC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -157,19 +158,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Media Player";
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            
             // 
-            // playingUC1
+            // playlistUC1
             // 
-            this.playingUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.playingUC1.duration = System.TimeSpan.Parse("00:00:00");
-            this.playingUC1.Font = new System.Drawing.Font("Microsoft MHei", 14.25F);
-            this.playingUC1.ForeColor = System.Drawing.Color.White;
-            this.playingUC1.Location = new System.Drawing.Point(0, 28);
-            this.playingUC1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.playingUC1.Name = "playingUC1";
-            this.playingUC1.Size = new System.Drawing.Size(641, 260);
-            this.playingUC1.TabIndex = 3;
-            this.playingUC1.Visible = false;
+            this.playlistUC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.playlistUC1.Location = new System.Drawing.Point(0, 28);
+            this.playlistUC1.Margin = new System.Windows.Forms.Padding(13, 24, 13, 24);
+            this.playlistUC1.Name = "playlistUC1";
+            this.playlistUC1.Size = new System.Drawing.Size(641, 260);
+            this.playlistUC1.TabIndex = 3;
+            this.playlistUC1.Parent = this;
             // 
             // aboutUC1
             // 
@@ -185,6 +184,18 @@
             this.aboutUC1.Size = new System.Drawing.Size(641, 260);
             this.aboutUC1.TabIndex = 1;
             this.aboutUC1.Visible = false;
+            this.aboutUC1.Parent = this;
+            // 
+            // playingUC2
+            // 
+            this.playingUC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.playingUC2.duration = System.TimeSpan.Parse("00:00:00");
+            this.playingUC2.Font = new System.Drawing.Font("Microsoft MHei", 14.25F);
+            this.playingUC2.Location = new System.Drawing.Point(0, 28);
+            this.playingUC2.Name = "playingUC2";
+            this.playingUC2.Size = new System.Drawing.Size(641, 260);
+            this.playingUC2.TabIndex = 4;
+            this.playingUC2.Parent = this;
             // 
             // PlayMainForm
             // 
@@ -192,7 +203,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(641, 374);
-            this.Controls.Add(this.playingUC1);
+            this.Controls.Add(this.playingUC2);
+            this.Controls.Add(this.playlistUC1);
             this.Controls.Add(this.aboutUC1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -226,8 +238,9 @@
         private System.Windows.Forms.Button button5;
         private AboutUC aboutUC1;
         private System.Windows.Forms.Panel panel2;
-        private PlayingUC playingUC1;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1;
+        private PlaylistUC playlistUC1;
+        private PlayingUC playingUC2;
     }
 }
 
